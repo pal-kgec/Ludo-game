@@ -1,5 +1,6 @@
 var dice=document.querySelector('.dice')
-var diceresult=document.querySelector('.dicepara')
+var diceresult=document.querySelector('.dicepara1')
+var diceresult2=document.querySelector('.dicepara2')
 var id;
 var turn=0;
 var sixCount=0;
@@ -126,7 +127,7 @@ if(sixCount===3){
   // getout
   if(turn%4===1){
     console.log("Red's turn" );
-
+    diceresult2.innerHTML="Red's turn" 
     document.querySelectorAll(".redpin").forEach(obj=>{
       obj.addEventListener("click",(event)=>{
         if(turn%4===1){
@@ -365,7 +366,7 @@ eval( cross + "="+ "0" )
 if(turn%4===2){
    isClicked= false;
   console.log("Green's turn" );
-
+diceresult2.innerHTML="Green's turn" 
   document.querySelectorAll(".greenpin").forEach(obj=>{
     obj.addEventListener("click",(event)=>{
       if(turn%4===2){
@@ -609,7 +610,7 @@ eval( cross + "="+ "0" )
 if(turn%4===3){
    isClicked= false;
   console.log("Yellow's turn" );
-
+diceresult2.innerHTML="Yellow's turn"
   document.querySelectorAll(".yellowpin").forEach(obj=>{
     obj.addEventListener("click",(event)=>{
       if(turn%4===3){
@@ -855,7 +856,7 @@ eval( cross + "="+ "0" )
 if(turn%4===0){
    isClicked= false;
   console.log("Blue's turn" );
-
+diceresult2.innerHTML="Blue's turn"
   document.querySelectorAll(".bluepin").forEach(obj=>{
     obj.addEventListener("click",(event)=>{
       if(turn%4===0){
