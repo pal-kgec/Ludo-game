@@ -97,7 +97,7 @@ if(random===6 && turn===0){
 
 if(random !=6 && previousValue!=6){
   turn++;
-
+sixCount=0
 }
 
 previousValue=random;
