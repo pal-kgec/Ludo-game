@@ -105,7 +105,7 @@ if(sixCount===3){
   turn++;
   sixCount=0;
   previousValue=0
-  console.log("wasted turn");
+  diceresult2.innerHTML="Wasted turn"
   return true;
 
 }
