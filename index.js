@@ -1,6 +1,7 @@
 var dice=document.querySelector('.dice')
 var diceresult=document.querySelector('.dicepara1')
 var diceresult2=document.querySelector('.dicepara2')
+var diceresult3=document.querySelector('.dicepara2')
 var id;
 var turn=0;
 var sixCount=0;
@@ -105,7 +106,7 @@ if(sixCount===3){
   turn++;
   sixCount=0;
   previousValue=0
-  diceresult2.innerHTML="Wasted turn"
+  diceresult3.innerHTML="Wasted turn"
   return true;
 
 }
