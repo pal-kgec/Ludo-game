@@ -214,8 +214,10 @@ isClicked= false;
           isClicked=true;
 
           console.log(targetobj.getElementsByTagName("img")[0].className);
-
-          if(targetobj.getElementsByTagName("img")[0].classList[0] != document.getElementById(id).classList[0]){
+          console.log(targetobj.getElementsByTagName("img").length)
+          if(targetobj.getElementsByTagName("img")[0].classList[0] != document.getElementById(id).classList[0] && targetobj.getElementsByTagName("img").length ===2){
+            
+            
             home=targetobj.getElementsByTagName("img")[0].classList[0].slice(0,-3)+"empty"
             targetpawn=targetobj.getElementsByTagName("img")[0]
 
