@@ -81,7 +81,7 @@ border-right:50px  solid blue;
 }
 
 .ludo_star{
-  position: absolute;
+  position: relative;
   height:100%;
   width: 100%;
 }
@@ -100,7 +100,7 @@ border-right:50px  solid blue;
 }
 
 .globe{
-  position: absolute;
+  position: relative;
   height:80%;
   width: 80%;
   top: 10%;
