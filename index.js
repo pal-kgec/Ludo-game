@@ -5,6 +5,7 @@ var diceresult3=document.querySelector('.dicepara3')
 var id;
 var turn=0;
 var sixCount=0;
+var killed=0;
 var previousValue
 var home;
 var redInitialCell="cell1"
@@ -88,18 +89,31 @@ dice.addEventListener("click",()=>{
   if(random===6 && turn!=0 && previousValue!=6){
     turn++
     sixCount++
+    killed=0
   }else if(random===6 && turn!=0){
+    
+    if(killed===1){
+      turn++
+      killed=0
+    }
     sixCount++
   }
 if(random===6 && turn===0){
   turn++
   sixCount++
+  killed=0;
 }
+// if(random===6 && killed=1){
+//   turn++
+//   sixcount++
+//   killed=0;
+// }
 diceresult3.innerHTML=sixCount
 if(random===6 && sixCount===3){
   turn++
   sixCount=0
   diceresult3.innerHTML="Wasted turn"
+  killed=0
   return true
   
 }
@@ -107,10 +121,11 @@ if(random===6 && sixCount===3){
 if(random!=6 && previousValue===6){
   
   sixCount=0
-  
+killed-=0  
 }else if(random !=6){
   turn++;
 sixCount=0
+killed=0
 }
 previousValue=random;
 // if(sixCount===3){
@@ -216,6 +231,8 @@ isClicked= false;
 console.log(cross);
 eval(cross + "="+ "0" )
             targetpawn.classList.replace("out","killed")
+            turn--;
+            killed=1;
           }
 
 
@@ -274,6 +291,8 @@ eval(cross + "="+ "0" )
 console.log(cross);
 eval( cross + "="+ "0" )
             targetpawn.classList.replace("out","killed")
+            turn--;
+            killed=1;
           }
         }
       }
@@ -325,6 +344,8 @@ eval( cross + "="+ "0" )
 console.log(cross);
 eval( cross + "="+ "0" )
             targetpawn.classList.replace("out","killed")
+            turn--;
+            killed=1;
           }          // console.log(document.getElementById(id));
         }
       }
@@ -377,6 +398,8 @@ eval( cross + "="+ "0" )
 console.log(cross);
 eval( cross + "="+ "0" )
             targetpawn.classList.replace("out","killed")
+            turn--;
+            killed=1;
           }
           // console.log(document.getElementById(id));
         }
@@ -471,6 +494,8 @@ if(random){
 console.log(cross);
 eval( cross + "="+ "0" )
           targetpawn.classList.replace("out","killed")
+          turn--;
+            killed=1;
         }
       }
     }
@@ -525,6 +550,8 @@ eval( cross + "="+ "0" )
 console.log(cross);
 eval( cross + "="+ "0" )
           targetpawn.classList.replace("out","killed")
+          turn--;
+            killed=1;
         }
       }
     }
@@ -579,6 +606,8 @@ eval( cross + "="+ "0" )
 console.log(cross);
 eval( cross + "="+ "0" )
           targetpawn.classList.replace("out","killed")
+          turn--;
+            killed=1;
         }
       }
     }
@@ -634,6 +663,8 @@ eval( cross + "="+ "0" )
           eval( cross + "="+ "0" )
 
           targetpawn.classList.replace("out","killed")
+          turn--;
+            killed=1;
         }
       }
     }
@@ -726,7 +757,8 @@ if(random){
 console.log(cross);
 eval( cross + "="+ "0" )
           targetpawn.classList.replace("out","killed")
-
+          turn--;
+          killed=1;
         }
       }
     }
@@ -782,6 +814,8 @@ eval( cross + "="+ "0" )
 console.log(cross);
 eval( cross + "="+ "0" )
           targetpawn.classList.replace("out","killed")
+          turn--;
+            killed=1;
         }
       }
     }
@@ -836,6 +870,8 @@ eval( cross + "="+ "0" )
 console.log(cross);
 eval( cross + "="+ "0" )
           targetpawn.classList.replace("out","killed")
+          turn--;
+            killed=1;
         }
       }
     }
@@ -891,6 +927,8 @@ eval( cross + "="+ "0" )
 console.log(cross);
 eval( cross + "="+ "0" )
           targetpawn.classList.replace("out","killed")
+          turn--;
+            killed=1;
         }
       }
     }
@@ -981,6 +1019,8 @@ if(random){
 console.log(cross);
 eval( cross + "="+ "0" )
           targetpawn.classList.replace("out","killed")
+          turn--;
+            killed=1;
         }
       }
     }
@@ -1035,6 +1075,8 @@ eval( cross + "="+ "0" )
 console.log(cross);
 eval( cross + "="+ "0" )
           targetpawn.classList.replace("out","killed")
+          turn--;
+            killed=1;
 
         }
       }
@@ -1089,6 +1131,8 @@ eval( cross + "="+ "0" )
 console.log(cross);
 eval( cross + "="+ "0" )
           targetpawn.classList.replace("out","killed")
+          turn--;
+            killed=1;
 
         }
       }
@@ -1143,6 +1187,8 @@ eval( cross + "="+ "0" )
 console.log(cross);
 eval( cross + "="+ "0" )
           targetpawn.classList.replace("out","killed")
+          turn--;
+            killed=1;
 
         }
       }
