@@ -1,7 +1,7 @@
 var dice=document.querySelector('.dice')
 var diceresult=document.querySelector('.dicepara1')
 var diceresult2=document.querySelector('.dicepara2')
-var diceresult3=document.querySelector('.dicepara2')
+var diceresult3=document.querySelector('.dicepara3')
 var id;
 var turn=0;
 var sixCount=0;
