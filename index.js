@@ -79,37 +79,48 @@ var cross;
 dice.addEventListener("click",()=>{
 // turn++
   random=Math.ceil(Math.random()*6)
-
+  // random=Math.ceil((Math.random()*1)+5)
   diceresult.innerHTML=random;
   console.log(diceresult.innerHTML);
 
   isClicked= false;
-  if(random===6 && turn!=0){
-    sixCount++
-  }
+  
   if(random===6 && turn!=0 && previousValue!=6){
     turn++
+    sixCount++
+  }else if(random===6 && turn!=0){
     sixCount++
   }
 if(random===6 && turn===0){
   turn++
   sixCount++
 }
+diceresult3.innerHTML=sixCount
+if(random===6 && sixCount===3){
+  turn++
+  sixCount=0
+  diceresult3.innerHTML="Wasted turn"
+  return true
+  
+}
 
-if(random !=6 && previousValue!=6){
+if(random!=6 && previousValue===6){
+  
+  sixCount=0
+  
+}else if(random !=6){
   turn++;
 sixCount=0
 }
-
 previousValue=random;
-if(sixCount===3){
-  turn++;
-  sixCount=0;
-  previousValue=0
-  diceresult3.innerHTML="Wasted turn"
-  return true;
+// if(sixCount===3){
+//   turn++;
+//   sixCount=0;
+//   previousValue=0
+//   diceresult3.innerHTML="Wasted turn"
+//   return true;
 
-}
+// }
   // if(random===6 && turn!=0){
   //   noTurnChange++;
   // }
@@ -173,8 +184,12 @@ isClicked= false;
           // if(targetcellValue>52){
           //   targetcellValue=targetcellValue-52
           // }
-          if(targetcellValue>51){
+          if(targetcellValue>51 && targetcellValue<58){
             targetcellValue=targetcellValue-51+60
+            
+          }
+          if(targetcellValue===66){
+            targetcellValue=99
           }
           red1currentvalue=targetcellValue
           targetCell="cell"+(targetcellValue)
@@ -227,8 +242,12 @@ eval(cross + "="+ "0" )
           // if(targetcellValue>52){
           //   targetcellValue=targetcellValue-52
           // }
-          if(targetcellValue>51){
+          if(targetcellValue>51 && targetcellValue<58){
             targetcellValue=targetcellValue-51+60
+            
+          }
+          if(targetcellValue===66){
+            targetcellValue=99
           }
           red2currentvalue=targetcellValue
           targetCell="cell"+(targetcellValue)
@@ -276,8 +295,12 @@ eval( cross + "="+ "0" )
           // if(targetcellValue>52){
           //   targetcellValue=targetcellValue-52
           // }
-          if(targetcellValue>51){
+          if(targetcellValue>51 && targetcellValue<58){
             targetcellValue=targetcellValue-51+60
+            
+          }
+          if(targetcellValue===66){
+            targetcellValue=99
           }
           red3currentvalue=targetcellValue
           targetCell="cell"+(targetcellValue)
@@ -324,8 +347,12 @@ eval( cross + "="+ "0" )
           // if(targetcellValue>52){
           //   targetcellValue=targetcellValue-52
           // }
-          if(targetcellValue>51){
+          if(targetcellValue>51 && targetcellValue<58){
             targetcellValue=targetcellValue-51+60
+            
+          }
+          if(targetcellValue===66){
+            targetcellValue=99
           }
           red4currentvalue=targetcellValue
           targetCell="cell"+(targetcellValue)
@@ -413,8 +440,11 @@ if(random){
           greentargetcellValue=greentargetcellValue-52
           g1cross++
         }
-        if(greentargetcellValue>12 && g1cross===1){
+        if(greentargetcellValue>12 && greentargetcellValue< 19 && g1cross===1){
           greentargetcellValue=greentargetcellValue-12+70
+        }
+        if(greentargetcellValue === 76){
+          greentargetcellValue=99
         }
         green1currentvalue=greentargetcellValue
         greentargetCell="cell"+(greentargetcellValue)
@@ -465,8 +495,11 @@ eval( cross + "="+ "0" )
           greentargetcellValue=greentargetcellValue-52
           g2cross++
         }
-        if(greentargetcellValue>12 && g2cross===1){
+        if(greentargetcellValue>12 && greentargetcellValue< 19 && g2cross===1){
           greentargetcellValue=greentargetcellValue-12+70
+        }
+        if(greentargetcellValue === 76){
+          greentargetcellValue=99
         }
         green2currentvalue=greentargetcellValue
         greentargetCell="cell"+(greentargetcellValue)
@@ -516,8 +549,11 @@ eval( cross + "="+ "0" )
           greentargetcellValue=greentargetcellValue-52
           g3cross++
         }
-        if(greentargetcellValue>12 && g3cross===1){
+        if(greentargetcellValue>12 && greentargetcellValue< 19 && g3cross===1){
           greentargetcellValue=greentargetcellValue-12+70
+        }
+        if(greentargetcellValue === 76){
+          greentargetcellValue=99
         }
         green3currentvalue=greentargetcellValue
         greentargetCell="cell"+(greentargetcellValue)
@@ -567,8 +603,11 @@ eval( cross + "="+ "0" )
           greentargetcellValue=greentargetcellValue-52
           g4cross++
         }
-        if(greentargetcellValue>12 && g4cross===1){
+        if(greentargetcellValue>12 && greentargetcellValue< 19 && g4cross===1){
           greentargetcellValue=greentargetcellValue-12+70
+        }
+        if(greentargetcellValue === 76){
+          greentargetcellValue=99
         }
         green4currentvalue=greentargetcellValue
         greentargetCell="cell"+(greentargetcellValue)
@@ -656,10 +695,12 @@ if(random){
           yellowtargetcellValue=yellowtargetcellValue-52
           y1cross++
         }
-        if(yellowtargetcellValue>25 && y1cross===1){
+        if(yellowtargetcellValue>25 && yellowtargetcellValue<32 && y1cross===1){
           yellowtargetcellValue=yellowtargetcellValue-25+80
         }
-
+        if(yellowtargetcellValue===86){
+          yellowtargetcellValue=99
+        }
         yellow1currentvalue=yellowtargetcellValue
         yellowtargetCell="cell"+(yellowtargetcellValue)
         console.log(yellowtargetCell);
@@ -710,8 +751,11 @@ eval( cross + "="+ "0" )
           yellowtargetcellValue=yellowtargetcellValue-52
           y2cross++
         }
-        if(yellowtargetcellValue>25 && y2cross===1){
+        if(yellowtargetcellValue>25 && yellowtargetcellValue<32 && y2cross===1){
           yellowtargetcellValue=yellowtargetcellValue-25+80
+        }
+        if(yellowtargetcellValue===86){
+          yellowtargetcellValue=99
         }
         yellow2currentvalue=yellowtargetcellValue
         yellowtargetCell="cell"+(yellowtargetcellValue)
@@ -762,8 +806,11 @@ eval( cross + "="+ "0" )
           yellowtargetcellValue=yellowtargetcellValue-52
           y3cross++
         }
-        if(yellowtargetcellValue>25 && y3cross===1){
+        if(yellowtargetcellValue>25 && yellowtargetcellValue<32 && y3cross===1){
           yellowtargetcellValue=yellowtargetcellValue-25+80
+        }
+        if(yellowtargetcellValue===86){
+          yellowtargetcellValue=99
         }
         yellow3currentvalue=yellowtargetcellValue
         yellowtargetCell="cell"+(yellowtargetcellValue)
@@ -813,8 +860,11 @@ eval( cross + "="+ "0" )
           yellowtargetcellValue=yellowtargetcellValue-52
           y4cross++
         }
-        if(yellowtargetcellValue>25 && y4cross===1){
+        if(yellowtargetcellValue>25 && yellowtargetcellValue<32 && y4cross===1){
           yellowtargetcellValue=yellowtargetcellValue-25+80
+        }
+        if(yellowtargetcellValue===86){
+          yellowtargetcellValue=99
         }
         yellow4currentvalue=yellowtargetcellValue
         yellowtargetCell="cell"+(yellowtargetcellValue)
@@ -902,8 +952,11 @@ if(random){
           bluetargetcellValue=bluetargetcellValue-52
         b1cross++
         }
-        if(bluetargetcellValue>38 && b1cross===1){
+        if(bluetargetcellValue>38 && bluetargetcellValue<45 && b1cross===1){
           bluetargetcellValue=bluetargetcellValue-38+90
+        }
+        if(bluetargetcellValue===96){
+          bluetargetcellValue=99
         }
         blue1currentvalue=bluetargetcellValue
         bluetargetCell="cell"+(bluetargetcellValue)
@@ -952,8 +1005,11 @@ eval( cross + "="+ "0" )
           bluetargetcellValue=bluetargetcellValue-52
           b2cross++
           }
-          if(bluetargetcellValue>38 && b2cross===1){
+          if(bluetargetcellValue>38 && bluetargetcellValue<45 && b2cross===1){
             bluetargetcellValue=bluetargetcellValue-38+90
+          }
+          if(bluetargetcellValue===96){
+            bluetargetcellValue=99
           }
         blue2currentvalue=bluetargetcellValue
         bluetargetCell="cell"+(bluetargetcellValue)
@@ -1004,8 +1060,11 @@ eval( cross + "="+ "0" )
           bluetargetcellValue=bluetargetcellValue-52
           b3cross++
           }
-          if(bluetargetcellValue>38 && b3cross===1){
+          if(bluetargetcellValue>38 && bluetargetcellValue<45 && b3cross===1){
             bluetargetcellValue=bluetargetcellValue-38+90
+          }
+          if(bluetargetcellValue===96){
+            bluetargetcellValue=99
           }
         blue3currentvalue=bluetargetcellValue
         bluetargetCell="cell"+(bluetargetcellValue)
@@ -1055,8 +1114,11 @@ eval( cross + "="+ "0" )
           bluetargetcellValue=bluetargetcellValue-52
           b4cross++
           }
-          if(bluetargetcellValue>38 && b4cross===1){
+          if(bluetargetcellValue>38 && bluetargetcellValue<45 && b1cross===1){
             bluetargetcellValue=bluetargetcellValue-38+90
+          }
+          if(bluetargetcellValue===96){
+            bluetargetcellValue=99
           }
         blue4currentvalue=bluetargetcellValue
         bluetargetCell="cell"+(bluetargetcellValue)
