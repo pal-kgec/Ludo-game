@@ -75,7 +75,7 @@ border-right:50px  solid blue;
   height:6.66%;
   width:6.66%;
   border: 0.1px solid grey;
-  position: relative;
+  position: absolute;
   display:flex;
   flex-wrap:wrap;
 }
