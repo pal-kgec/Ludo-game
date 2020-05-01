@@ -75,32 +75,32 @@ border-right:50px  solid blue;
   height:6.66%;
   width:6.66%;
   border: 0.1px solid grey;
-  position: relative;
+  position: absolute;
   display:flex;
   flex-wrap:wrap;
 }
 
 .ludo_star{
-  position: relative;
+  position: absolute;
   height:100%;
   width: 100%;
 }
 .bluepawn,.greenpawn,.yellowpawn{
-  position: relative;
+  position:absolute;
   left:15%;
   height:70%;
   top:10%;
   width: 70%;
 }
 .redpawn{
-  position: relative;
+  position: absolute;
   height:100%;
   width: 100%;
 
 }
 
 .globe{
-  position: relative;
+  position: absolute;
   height:80%;
   width: 80%;
   top: 10%;
