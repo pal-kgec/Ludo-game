@@ -86,16 +86,17 @@ border-right:50px  solid blue;
   width: 100%;
 }
 .bluepawn,.greenpawn,.yellowpawn{
-  position: absolute;
+  position: relative;
   left:15%;
   height:70%;
   top:10%;
   width: 70%;
 }
 .redpawn{
-  position: absolute;
+  position: relative;
   height:100%;
   width: 100%;
+
 }
 
 .globe{
