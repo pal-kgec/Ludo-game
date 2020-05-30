@@ -1,0 +1,133 @@
+.game{
+  background-color: white;
+  height:500px;
+  width:500px;
+  position: relative;
+
+}
+
+.house{
+  height:40%;
+  width:40%;
+position: absolute;
+}
+.red{
+  background-color: red;
+}
+.blue{
+  background-color: blue;
+}
+.green{
+    background-color: green;
+}
+.yellow{
+    background-color: yellow;
+}
+
+.box{
+  height:72%;
+  width:72%;
+  background-color: white;
+  margin:14%;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+.boxred{
+    background-color: #ffe6e5;
+}
+.boxgreen{
+    background-color: #ddfada;
+}
+.boxblue{
+    background-color: #ffe6e5;
+}
+.boxyellow{
+    background-color: #ffe6e5;
+}
+
+.square{
+  height:30%;
+  width:30%;
+  margin:10%;
+  border: .1px red;
+  position: relative;
+}
+.pawn{
+  height:76%;
+  width:76%;
+  margin:12%;
+  position: absolute;
+  top:0;
+}
+.home{
+  height:0%;
+  width:0%;
+top:40%;
+left:40%;
+position: absolute;
+border-bottom: 50px solid red;
+border-top: 50px solid yellow;
+border-left:50px  solid green;
+border-right:50px  solid blue;
+}
+.redhome{
+  bottom:40%;
+  left:40%;
+  height:6%;
+  width: 20%;
+  position:absolute;
+  background-color: red;
+}
+.greenhome{
+  top:42%;
+  left:40%;
+  height:15%;
+  width: 6%;
+  position:absolute;
+  background-color: green;
+  border-bottom: 10px solid ;
+  /* transform: skewy(-40deg); */
+}
+.greenhome:before{
+  top:42%;
+  left:40%;
+  height:15%;
+  width: 6%;
+  position:absolute;
+  background-color: green;
+  border-bottom: 10px solid ;
+  transform: skewy(-40deg);
+}
+.cell{
+  height:6.66%;
+  width:6.66%;
+  border: 0.1px solid grey;
+  position: absolute;
+}
+
+.ludo_star{
+  position: absolute;
+  height:100%;
+  width: 100%;
+}
+.bluepawn,.greenpawn,.yellowpawn{
+  position: absolute;
+  left:15%;
+  height:70%;
+  top:10%;
+  width: 70%;
+}
+.redpawn{
+  position: absolute;
+  height:100%;
+  width: 100%;
+}
+
+.globe{
+  position: absolute;
+  height:80%;
+  width: 80%;
+  top: 10%;
+  left:10%;
+}

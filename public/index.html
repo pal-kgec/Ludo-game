@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ludo Pal</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="game">
+      <div class="house red" style="bottom:0; left:0;">
+        <div class="box">
+          <div class="square"><div class="pawn red redpin" ><img src="images/redpawn.png" class="redpawn" id="redpawn1" alt=""></div></div>
+          <div class="square"><div class="pawn red redpin"><img src="images/redpawn.png" class="redpawn" id="redpawn2" alt=""></div></div>
+          <div class="square"><div class="pawn red redpin"><img src="images/redpawn.png" class="redpawn" id="redpawn3" alt=""></div></div>
+          <div class="square"><div class="pawn red redpin"><img src="images/redpawn.png" class="redpawn" id="redpawn4" alt=""></div></div>
+        </div>
+      </div>
+
+      <div class="house blue" style="bottom:0; right:0;">
+        <div class="box">
+          <div class="square"><div class="pawn blue bluepin"><img src="images/bluepawn.png" class="bluepawn" id="bluepawn1" alt=""></div></div>
+          <div class="square"><div class="pawn blue bluepin"><img src="images/bluepawn.png" class="bluepawn" id="bluepawn2" alt=""></div></div>
+          <div class="square"><div class="pawn blue bluepin"><img src="images/bluepawn.png" class="bluepawn" id="bluepawn3" alt=""></div></div>
+          <div class="square"><div class="pawn blue bluepin"><img src="images/bluepawn.png" class="bluepawn" id="bluepawn4" alt=""></div></div>
+        </div>
+      </div>
+
+      <div class="house green">
+        <div class="box">
+          <div class="square"><div class="pawn green greenpin"><img src="images/greenpawn.png" class="greenpawn" id="greenpawn1" alt=""></div></div>
+          <div class="square"><div class="pawn green greenpin"><img src="images/greenpawn.png" class="greenpawn" id="greenpawn2" alt=""></div></div>
+          <div class="square"><div class="pawn green greenpin"><img src="images/greenpawn.png" class="greenpawn" id="greenpawn3" alt=""></div></div>
+          <div class="square"><div class="pawn green greenpin"><img src="images/greenpawn.png" class="greenpawn" id="greenpawn4" alt=""></div></div>
+        </div>
+      </div>
+
+      <div class="house yellow" style="right:0">
+        <div class="box">
+          <div class="square"><div class="pawn yellow yellowpin"><img src="images/yellowpawn.png" class="yellowpawn" id="yellowpawn1" alt=""></div></div>
+          <div class="square"><div class="pawn yellow yellowpin"><img src="images/yellowpawn.png" class="yellowpawn" id="yellowpawn2" alt=""></div></div>
+          <div class="square"><div class="pawn yellow yellowpin"><img src="images/yellowpawn.png" class="yellowpawn" id="yellowpawn3" alt=""></div></div>
+          <div class="square"><div class="pawn yellow yellowpin"><img src="images/yellowpawn.png" class="yellowpawn" id="yellowpawn4" alt=""></div></div>
+        </div>
+      </div>
+
+      <div class="home" id="cell99"></div>
+      <!-- <div class="redhome"></div>
+      <div class="greenhome"></div> -->
+
+
+
+      <div class="cell" style="top:0; left:40%" id="cell24"></div>
+      <div class="cell" style="top:6.66%; left:40%" id="cell23"></div>
+      <div class="cell" style="top:13.32%; left:40%" id="cell22"><img src="images/star_normal.png" alt="" class="ludo_star"></div>
+      <div class="cell" style="top:19.98%; left:40%" id="cell21"></div>
+      <div class="cell" style="top:26.64%; left:40%" id="cell20"></div>
+      <div class="cell" style="top:33.3%; left:40%" id="cell19"></div>
+
+
+
+      <div class="cell" style="top:0; left:46.66%" id="cell25"></div>
+      <div class="cell yellow" style="top:6.66%; left:46.66%" id="cell81"></div>
+      <div class="cell yellow" style="top:13.32%; left:46.66%" id="cell82"></div>
+      <div class="cell yellow" style="top:19.98%; left:46.66%" id="cell83"></div>
+      <div class="cell yellow" style="top:26.64%; left:46.66%" id="cell84"></div>
+      <div class="cell yellow" style="top:33.3%; left:46.66%" id="cell85"></div>
+
+
+
+      <div class="cell" style="top:0; left:53.32%" id="cell26"></div>
+      <div class="cell yellow" style="top:6.66%; left:53.32%" id="cell27"><img src="images/globe3.png" alt="" class="globe"></div>
+      <div class="cell" style="top:13.32%; left:53.32%" id="cell28"></div>
+      <div class="cell" style="top:19.98%; left:53.32%" id="cell29"></div>
+      <div class="cell" style="top:26.64%; left:53.32%" id="cell30"></div>
+      <div class="cell" style="top:33.3%; left:53.32%" id="cell31"></div>
+
+      <div class="cell" style="bottom:0; left:40%" id="cell52"></div>
+      <div class="cell red" style="bottom:6.66%; left:40%" id="cell1"></div>
+      <div class="cell" style="bottom:13.32%; left:40%" id="cell2"></div>
+      <div class="cell" style="bottom:19.98%; left:40%" id="cell3"></div>
+      <div class="cell" style="bottom:26.64%; left:40%" id="cell4"></div>
+      <div class="cell" style="bottom:33.3%; left:40%" id="cell5"></div>
+
+
+      <div class="cell" style="bottom:0; left:46.66%" id="cell51"></div>
+      <div class="cell red" style="bottom:6.66%; left:46.66%" id="cell61"></div>
+      <div class="cell red" style="bottom:13.32%; left:46.66%" id="cell62"></div>
+      <div class="cell red" style="bottom:19.98%; left:46.66%" id="cell63"></div>
+      <div class="cell red" style="bottom:26.64%; left:46.66%" id="cell64"></div>
+      <div class="cell red" style="bottom:33.3%; left:46.66%" id="cell65"></div>
+
+      <div class="cell" style="bottom:0; left:53.32%" id="cell50"></div>
+      <div class="cell" style="bottom:6.66%; left:53.32%" id="cell49"></div>
+      <div class="cell" style="bottom:13.32%; left:53.32%" id="cell48"><img src="images/star_normal.png" alt="" class="ludo_star"></div>
+      <div class="cell" style="bottom:19.98%; left:53.32%" id="cell47"></div>
+      <div class="cell" style="bottom:26.64%; left:53.32%" id="cell46"></div>
+      <div class="cell" style="bottom:33.3%; left:53.32%" id="cell45"></div>
+
+      <div class="cell" style="top:40%; left:0" id="cell13"></div>
+      <div class="cell green" style="top:40%; left:6.66%" id="cell14"><img src="images/globe3.png" alt="" class="globe"></div>
+      <div class="cell" style="top:40%; left:13.32%" id="cell15"></div>
+      <div class="cell" style="top:40%; left:19.98%" id="cell16"></div>
+      <div class="cell" style="top:40%; left:26.64%" id="cell17"></div>
+      <div class="cell" style="top:40%; left:33.3%" id="cell18"></div>
+
+
+      <div class="cell" style="top:46.66%; left:0" id="cell12"></div>
+      <div class="cell green" style="top:46.66%; left:6.66%" id="cell71"></div>
+      <div class="cell green" style="top:46.66%; left:13.32%" id="cell72"></div>
+      <div class="cell green" style="top:46.66%; left:19.98%" id="cell73"></div>
+      <div class="cell green" style="top:46.66%; left:26.64%" id="cell74"></div>
+      <div class="cell green" style="top:46.66%; left:33.3%" id="cell75"></div>
+
+
+      <div class="cell" style="top:53.32%; left:0" id="cell11"></div>
+      <div class="cell" style="top:53.32%; left:6.66%" id="cell10"></div>
+      <div class="cell" style="top:53.32%; left:13.32%" id="cell9"><img src="images/star_normal.png" alt="" class="ludo_star"></div>
+      <div class="cell" style="top:53.32%; left:19.98%" id="cell8"></div>
+      <div class="cell" style="top:53.32%; left:26.64%" id="cell7"></div>
+      <div class="cell" style="top:53.32%; left:33.3%" id="cell6"></div>
+
+
+      <div class="cell" style="top:40%; right:0" id="cell37"></div>
+      <div class="cell" style="top:40%; right:6.66%" id="cell36"></div>
+      <div class="cell" style="top:40%; right:13.32%" id="cell35"><img src="images/star_normal.png" alt="" class="ludo_star"></div>
+      <div class="cell" style="top:40%; right:19.98%" id="cell34"></div>
+      <div class="cell" style="top:40%; right:26.64%" id="cell33"></div>
+      <div class="cell" style="top:40%; right:33.3%" id="cell32"></div>
+
+
+      <div class="cell" style="top:46.66%; right:0" id="cell38"></div>
+      <div class="cell blue" style="top:46.66%; right:6.66%" id="cell91"></div>
+      <div class="cell blue" style="top:46.66%; right:13.32%" id="cell92"></div>
+      <div class="cell blue" style="top:46.66%; right:19.98%" id="cell93"></div>
+      <div class="cell blue" style="top:46.66%; right:26.64%" id="cell94"></div>
+      <div class="cell blue" style="top:46.66%; right:33.3%" id="cell95"></div>
+
+
+      <div class="cell" style="top:53.32%; right:0" id="cell39"></div>
+      <div class="cell blue" style="top:53.32%; right:6.66%" id="cell40"><img src="images/globe3.png" alt="" class="globe"></div>
+      <div class="cell" style="top:53.32%; right:13.32%" id="cell41"></div>
+      <div class="cell" style="top:53.32%; right:19.98%" id="cell42"></div>
+      <div class="cell" style="top:53.32%; right:26.64%" id="cell43"></div>
+      <div class="cell" style="top:53.32%; right:33.3%" id="cell44"></div>
+    </div>
+
+    <div class="dicediv">
+      <button class="dice" type="button" name="button">Generate</button>
+      <p class="dicepara1"></p>
+      <p class="dicepara2"></p>
+      <p class="dicepara3"></p>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="index.js">
+    </script>
+    
+  </body>
+</html>
